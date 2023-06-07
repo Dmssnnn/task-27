@@ -158,3 +158,26 @@ console.log(getFindAnObject(massiveOfObjects));
 //27
 
 
+  // 4.დავწეროთ ფუნქცია, რომელიც დაგვიბრუნებს არგუმენტად მიღებული ხარჯების ჯამს.
+    // ფუნქციას არგუმენტად გადაეცით  მასივი - productData და დათვალეთ გადაცემული მასივში amount ის ჯამი
+    // const productData = [{product_id: 1, amount: 200}, { product_id: 2, amount: 300 }, { product_id:3, amount: 500 }] 
+    // დაბრუნებული ჯამის მნიშნელობა გამოიტანეთ p ტეგის მნიშნელობაში
+    
+    let sumOfPoductData = 0;
+    const findSum = (productData) => {
+        for( let i = 0 ; i < productData.length; i++);
+        sumOfPoductData = sumOfPoductData + productData[i];
+        return sumOfPoductData;
+    }
+
+    const productData = [
+        {
+            product_id: 1, amount: 200
+        },
+        {
+            product_id: 2, amount: 300
+        },
+        {
+            product_id: 3, amount:500
+        }
+    ]
