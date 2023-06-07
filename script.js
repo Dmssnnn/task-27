@@ -163,21 +163,58 @@ console.log(getFindAnObject(massiveOfObjects));
     // const productData = [{product_id: 1, amount: 200}, { product_id: 2, amount: 300 }, { product_id:3, amount: 500 }] 
     // დაბრუნებული ჯამის მნიშნელობა გამოიტანეთ p ტეგის მნიშნელობაში
     
-    let sumOfPoductData = 0;
-    const findSum = (productData) => {
-        for( let i = 0 ; i < productData.length; i++);
-        sumOfPoductData = sumOfPoductData + productData[i];
-        return sumOfPoductData;
-    }
 
-    const productData = [
+
+
+
+    //office hour 
+
+
+    // შექმენით ფუნქცია რომელიც არგუმენტად მიიღებს სახელების მასივს და დააბრუნებს მხოლოდ იმ სახელებს რომლის
+    //  სიგრძეც მეტია 5ზე; ფუნქცია გამოიძახეთ და დალოგეთ კონსოლში
+
+    const massiveOfNames = [ "giorgi", "dima", "ana", "dmssnnn" ]
+    const getLongNames = (massiveOfNames) => {
+        const result = massiveOfNames.filter((massiveOfNames) => massiveOfNames.length >= 6 )
+        return result;
+    }
+    console.log(getLongNames(massiveOfNames));
+
+    // შექმენით ფუნქცია რომელიც არგუმენტად მიიღებს რიცხვებს და დააბრუნებს ამ რიცხვების ჯამს; ფუნქცია გამოიძახეთ და დალოგეთ კონსოლში
+
+    const getSum = (a,b) => {
+        let sum =  a + b;
+        return sum;
+    }
+    console.log(getSum(3,9))   
+
+    // შექმენით ფუნქცია, რომელიც არგუმენტად მიიღებს ორ რიცხვს და დბრუნებს სხვაობას; ფუნქცია გამოიძახეთ და დალოგეთ კონსოლში
+    const getDistinction = (a,b) => {
+        let result =  a - b;
+        return result;
+    }
+    console.log(getDistinction(9,3))
+
+
+    // შექმენით ფუნქცია რომელიც არგუმენტად მიიღებს ობიექტების მასივს და დააბრუნებს  ობიექტს რომლის ასაკიც ტოლია 25ის და 
+    // დაამატებს თვისებას შემდეგი მნიშვნელობით (isRegistered:true); ფუნქცია გამოიძახეთ და დალოგეთ კონსოლში
+    const isRegistered = true;
+    const massiveOfAge = [
         {
-            product_id: 1, amount: 200
+            name: " dimitri ",
+            age : 25,
+            isRegistered : true,
         },
         {
-            product_id: 2, amount: 300
-        },
-        {
-            product_id: 3, amount:500
+            name:" gvanca ",
+            age  : 19,
+            isRegistered : false,
         }
     ]
+
+    const getFunctionOfAge = ( massiveOfAge, isRegistered) => {
+       const result = massiveOfAge.find((massiveOfAge)=> massiveOfAge.age === 25 && massiveOfAge.isRegistered )
+       return result;
+
+    } 
+console.log(getFunctionOfAge(massiveOfAge));
